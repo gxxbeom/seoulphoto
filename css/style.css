@@ -60,7 +60,7 @@ header div {
 }
 
 /* 서브메뉴 */
-.subMenu { z-index:1;
+.subMenu { z-index:2;
   position:absolute;
   background:white;
   width:100%; padding:10px;
@@ -103,7 +103,13 @@ header div {
 	width:1320px; height:500px;
   object-fit: cover;
 }
-
+/* 스와이퍼 */
+.swiper {
+  width:1320px;
+  height:500px;
+  margin:auto;
+  margin-top:300px;
+}
 /* 메인 이미지 */
 
 
@@ -134,4 +140,10 @@ header div {
   position: absolute;
   width:100%;
   top:50%;
+}
+
+#space {
+  border:solid red;
+  width:1320px;
+  height: 500px;
 }

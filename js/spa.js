@@ -17,19 +17,42 @@ $(document).ready(function(){
     $(".mainMenu").removeClass("active");
     $(".subMenu").stop().slideUp();
   });
+  //스와이프에 마우스오버 이벤트 적용
+  $('.swiper-slide').on('mouseover', function(){
+    swiper.autoplay.stop();
+  });
+  $('.swiper-slide').on('mouseout', function(){
+    swiper.autoplay.start();
+  });
+  //스와이프
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    speed: 2000,
+
+    slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
+    centeredSlides: true,    //센터모드
+    autoplay: {     //자동슬라이드 (false-비활성화)
+      delay: 2500, // 시간 설정
+      disableOnInteraction: false, // false-스와이프 후 자동 재생
+    },
+    
+    // If we need pagination 블릿
+    pagination: {
+      el: '.swiper-pagination',
+    },
   
-// 왼쪽방향 자동 슬라이드
-  setInterval(leftMove, 4000);
-  function leftMove(){
-    $("#sliding div").stop().animate({left:"-1320px"},2000,
-    function(){
-      $(this).append( $(this).children().first());
-      $(this).css("left",0);
-    });
-  };
-
-
-
-
-
-});/////end
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    /////
+  });
+});
