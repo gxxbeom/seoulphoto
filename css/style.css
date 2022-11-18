@@ -1,0 +1,137 @@
+@charset "utf=8";
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html,body {
+  font:"나눔고딕"; color:#666;
+}
+/* 상단로고 */
+.logo img {
+  display:block;
+  width:100%;
+  margin:auto;
+  
+}
+.logo {
+	width:80px; height:80px;
+  margin:auto;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+header p {
+  text-align: center;
+  max-width: 100%;
+  font-size:1.2rem;
+}
+/* 네비게이션 메뉴*/
+a {
+  display:block;
+  text-decoration: none;
+  color:#666;
+}
+header>nav {
+	flex:1;/*자식입장*/
+	display:flex;/*부모입장*/
+	align-items:flex-start;	
+  margin-top:200px;
+  margin-left:150px;
+  margin-right:150px;
+	text-align:center;/*내부모든콘텐츠 가로중앙*/
+}
+header>nav>a {flex:1;}
+header div {
+		flex:1; position:relative;
+}
+/* 메인메뉴 */
+.mainMenu {
+  padding:20px 0 15px 0; 
+  font-size:1.2rem; 
+  border-bottom:2px solid #b9ad9a;
+  /* z-index:1; */
+}
+.mainMenu:hover + .subMenu {
+  /* display:block; */
+}
+.mainMenu:hover, .mainMenu.active {
+  background:#b9ad9a; color:white;
+}
+
+/* 서브메뉴 */
+.subMenu { z-index:1;
+  position:absolute;
+  background:white;
+  width:100%; padding:10px;
+  display:none;
+  box-shadow:0 2px 2px rgba(0,0,0,0.5);
+}
+.subMenu a {
+  padding:10px;
+}
+.subMenu a:hover, .subMenu.active {
+  background:#b9ad9a; color:white;
+}
+#layout {
+  width:1320px;
+  height:20000px;
+  border:3px solid pink;
+  margin:auto;
+}
+
+/* 슬라이드 */
+#sliding {
+	position:relative;
+	overflow:hidden;
+  height:500px;
+  margin-top:100px;
+}
+#sliding h1 {
+	position:absolute; z-index:1;
+	padding:50px;
+  text-shadow:0 0 3px black;
+  color:white;
+	font-size:2rem;
+}
+/*애니메이션 부분*/
+#sliding div {
+	display:flex; width:6600px;
+	position:relative;/*좌표이동에 필수!*/
+}
+#sliding img {
+	width:1320px; height:500px;
+  object-fit: cover;
+}
+
+/* 메인 이미지 */
+
+
+#mainimg {
+  max-width: 50%;
+  margin:auto;
+  margin-top:500px;
+  /* border:solid red; */
+  position:relative;
+}
+#mainimg img {
+  max-width:100%;
+  display:block;
+}
+.maintext1 {
+  margin-top:200px;
+  text-align: center;
+}
+.maintext2 {
+  margin-top:200px;
+  text-align:center;
+}
+#mainimg p {
+  margin-top:50px;
+  text-align:center;
+}
+#mainimg div {
+  position: absolute;
+  width:100%;
+  top:50%;
+}
